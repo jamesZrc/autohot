@@ -73,6 +73,17 @@ else
 	 Run D:\program\ideaIU\bin\idea64.exe ;
 return
 
+; IDEA
+!A::  ; Alt+A
+if WinActive("IntelliJ IDEA") 
+    WinMinimize ;
+else if WinExist("IntelliJ IDEA")
+	WinActivate ;
+else
+	 Run D:\program\ideaIU\bin\idea64.exe ;
+return
+
+
 ; VPN
 !V::  ; Alt+V
 if WinActive("VPN") 
@@ -115,7 +126,7 @@ return
 
 ; ================= 系统应用 Win ======================
 ; excel
-#E::  ; Win+E
+#!E::  ; Win+Alt+E
 if WinActive("Excel") 
     WinMinimize ;
 else if WinExist("Excel")
@@ -125,7 +136,7 @@ else
 return
 
 ; Word文档
-#!W::  ; Win+Alt+W
+#W::  ; Win+W
 if WinActive("Visio Professional") 
     WinMinimize ;
 else if WinExist("Visio Professional")
