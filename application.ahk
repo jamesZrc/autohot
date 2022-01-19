@@ -15,27 +15,27 @@ SetTitleMatchMode, 2 ;
 ; ================= 自己安装的应用 Alt ======================
 ; DBeaver数据库
 !D::  ; Alt+D
-if WinActive("DBeaver") 
+if WinActive("DBeaver")
     WinMinimize ;
 else if WinExist("DBeaver")
 	WinActivate ;
 else
 	 Run D:\program\dbeaver\dbeaver.exe ;
-return 
+return
 
 ; Fiddler抓包
 !F::  ; Alt+F
-if WinActive("Fiddler") 
+if WinActive("Fiddler")
     WinMinimize ;
 else if WinExist("Fiddler")
 	WinActivate ;
 else
 	 Run D:\program\Fiddler\Fiddler.exe ;
-return 
+return
 
 ; Postman接口请求
 !P::  ; Alt+P
-if WinActive("Postman") 
+if WinActive("Postman")
     WinMinimize ;
 else if WinExist("Postman")
 	WinActivate ;
@@ -45,7 +45,7 @@ return
 
 ; 企业微信
 !W::  ; Alt+W
-if WinActive("企业微信") 
+if WinActive("企业微信")
     WinMinimize ;
 else if WinExist("企业微信")
 	WinActivate ;
@@ -55,7 +55,7 @@ return
 
 ; Chrome浏览器
 !G::  ; Alt+G
-if WinActive("Chrome") 
+if WinActive("Chrome")
     WinMinimize ;
 else if WinExist("Chrome")
 	WinActivate ;
@@ -65,7 +65,7 @@ return
 
 ; IDEA
 !i::  ; Alt+i
-if WinActive("IntelliJ IDEA") 
+if WinActive("IntelliJ IDEA")
     WinMinimize ;
 else if WinExist("IntelliJ IDEA")
 	WinActivate ;
@@ -75,7 +75,7 @@ return
 
 ; IDEA
 !A::  ; Alt+A
-if WinActive("IntelliJ IDEA") 
+if WinActive("IntelliJ IDEA")
     WinMinimize ;
 else if WinExist("IntelliJ IDEA")
 	WinActivate ;
@@ -86,7 +86,7 @@ return
 
 ; VPN
 !V::  ; Alt+V
-if WinActive("VPN") 
+if WinActive("VPN")
     WinMinimize ;
 else if WinExist("VPN")
 	WinActivate ;
@@ -96,7 +96,7 @@ return
 
 ; Notepad++
 !N::  ; Alt+N
-if WinActive("Notepad++") 
+if WinActive("Notepad++")
     WinMinimize ;
 else if WinExist("Notepad++")
 	WinActivate ;
@@ -106,7 +106,7 @@ return
 
 ; python
 !+P::  ; Alt+Shift+P
-if WinActive("pyutils") 
+if WinActive("pyutils")
     WinMinimize ;
 else if WinExist("pyutils")
 	WinActivate ;
@@ -116,7 +116,7 @@ return
 
 ; 腾讯会议
 !+T::  ; Alt+Shift+T
-if WinActive("腾讯会议") 
+if WinActive("腾讯会议")
     WinMinimize ;
 else if WinExist("腾讯会议")
 	WinActivate ;
@@ -127,7 +127,7 @@ return
 ; ================= 系统应用 Win ======================
 ; excel
 #!E::  ; Win+Alt+E
-if WinActive("Excel") 
+if WinActive("Excel")
     WinMinimize ;
 else if WinExist("Excel")
 	WinActivate ;
@@ -137,7 +137,7 @@ return
 
 ; Word文档
 #W::  ; Win+W
-if WinActive("Visio Professional") 
+if WinActive("Visio Professional")
     WinMinimize ;
 else if WinExist("Visio Professional")
 	WinActivate ;
@@ -148,13 +148,13 @@ return
 ; 退出
 #Q::  ; Win+Q
 WinGetActiveTitle, Title
-if WinActive(Title) 
+if WinActive(Title)
     WinClose ;
 return
 
 ; Outlook邮箱
 #O::  ; Win+O
-if WinActive("O") 
+if WinActive("O")
     WinMinimize ;
 else if WinExist("Outlook")
 	WinActivate ;
@@ -164,7 +164,7 @@ return
 
 ; IE
 #+E::  ; Win+Shift+E
-if WinActive("Internet Explore") 
+if WinActive("Internet Explore")
     WinMinimize ;
 else if WinExist("Internet Explore")
 	WinActivate ;
@@ -174,7 +174,7 @@ return
 
 ; 堡垒机
 #R::  ; Win+R
-if WinActive("10.197.3.23") 
+if WinActive("10.197.3.23")
     WinMinimize ;
 else if WinExist("10.197.3.23")
 	WinActivate ;
@@ -188,7 +188,7 @@ Run D:\command\dos.bat
 
 ; cmd
 #T::  ; Win+T
-if WinActive("cmd.exe") 
+if WinActive("cmd.exe")
     WinMinimize ;
 else if WinExist("cmd.exe")
 	WinActivate ;
@@ -196,3 +196,10 @@ else
 	Run C:\Windows\System32\cmd.exe
 return
 
+;================= 剪切板 ==============================================================
+^!+G::  ; Ctrl+Alt+Shift+G
+clipboard := "#Ney940s"
+return
+
+
+#Include D:\git\testdb.ahk
