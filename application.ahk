@@ -104,6 +104,16 @@ else
 	 Run D:\program\Notepad++\notepad++.exe ;
 return
 
+; Jmeter
+!J::  ; Alt+J
+if WinActive("JMeter")
+    WinMinimize ;
+else if WinExist("JMeter")
+	WinActivate ;
+else
+	 Run D:\program\apache-jmeter-5.4.3\bin\jmeter.bat ;
+return
+
 ; python
 !+P::  ; Alt+Shift+P
 if WinActive("pyutils")
